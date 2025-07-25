@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Management</title>
+    <link rel="stylesheet" href="css/queue.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Queue Management System Section -->
+        <section class="queue-section">
+            <h2>Queue Management System</h2>
+
+            <div class="queue-table-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Queue No</th>
+                            <th>Patient Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="queue-list">
+                        <!-- Patients will be added dynamically -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Queue Management Buttons -->
+            <div class="queue-buttons">
+                <button onclick="openModal('addPatientModal')">Add Patient</button>
+                <button onclick="callNextPatient()">Call Next</button>
+                <button onclick="openModal('removePatientModal')">Remove Selected</button>
+                <button onclick="clearQueue()">Clear Queue</button>
+            </div>
+        </section>
+    </div>
+    <!-- Add Patient Modal -->
+    <div id="addPatientModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('addPatientModal')">&times;</span>
+            <h3>Add Patient</h3>
+            <input type="text" id="patientName" placeholder="Enter patient name">
+            <button class="modal-btn" onclick="confirmAddPatient()">Add</button>
+        </div>
+    </div>
+
+    <!-- Remove Patient Modal -->
+    <div id="removePatientModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('removePatientModal')">&times;</span>
+            <h3>Remove Patient</h3>
+            <input type="text" id="removePatientName" placeholder="Enter patient name">
+            <button class="modal-btn" onclick="confirmRemovePatient()">Remove</button>
+        </div>
+    </div>
+
+    <script src="javascript/queue.js" defer></script>
+</body>
+</html>

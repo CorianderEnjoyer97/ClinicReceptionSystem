@@ -1,0 +1,227 @@
+/* General Styling */
+body {
+    background-color: #F4F4F4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.hero {
+    background: #034646;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 0;
+}
+
+/* LAYOUT */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    background: #004d4d;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile Section */
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.sidebar .profile h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Sidebar Buttons */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    background: #006666;
+    transform: scale(1.05);
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    background: #FF4C4C;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    align-self: center;
+    transition: 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background: #CC0000;
+    transform: scale(1.05);
+}
+
+/* 🏥 Main Content Layout */
+.main-content {
+    margin-left: 270px; 
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 📅 Full-Page Calendar Layout */
+.schedule-container {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* 🗓️ Calendar Layout */
+.calendar {
+    width: 100%; 
+    max-width: 1100px; 
+    border-collapse: collapse;
+}
+
+/* 📌 Calendar Header */
+.calendar th {
+    background: #008080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* 📅 Calendar Cells */
+.calendar td {
+    border: 1px solid #ddd;
+    padding: 8px;  
+    font-size: 1rem;
+    text-align: left;  
+    vertical-align: top;
+    width: 14.28%;
+    height: 75px; 
+    min-width: 120px;
+}
+
+/* 📌 Month Navigation */
+/* 📌 Month Navigation */
+.month-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+/* 🔹 Month Title */
+#monthDisplay {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #034646;
+    text-align: center;
+    flex-grow: 1; 
+}
+
+/* 🔽 Fix the Navigation Buttons */
+.month-nav button {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 5px 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 🔽 Previous & Next Arrows */
+#prevMonth::before {
+    content: "◀";
+    color: #034646;
+    font-size: 1.8rem;
+}
+
+#nextMonth::before {
+    content: "▶";
+    color: #034646;
+    font-size: 1.8rem;
+}
+
+/* 📌 Appointment Styling */
+.appointment {
+    background: #16ac8e;
+    color: white;
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 5px 0;
+    max-width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

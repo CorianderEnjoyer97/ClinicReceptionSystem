@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Management</title>
+    <link rel="stylesheet" href="css/appointments.css">
+</head>
+<body>
+
+    <section class="form-section">
+        <h2>Schedule New Appointment Form</h2>
+        <form id="appointment-form">
+            <label for="appointmentId">Appointment ID:</label>
+            <input type="text" id="appointmentId" required>
+
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" required>
+
+            <label for="appointmentDate">Date:</label>
+            <input type="date" id="appointmentDate" required>
+
+            <label for="appointmentTime">Time:</label>
+            <input type="time" id="appointmentTime" required>
+
+            <label for="doctor">Doctor:</label>
+            <input type="text" id="doctor" required>
+
+            <button type="submit">Add Appointment</button>
+        </form>
+    </section>
+
+    <!-- Modal for editing appointments -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <h2>Edit Appointment</h2>
+            <form id="edit-form">
+                <label for="modalAppointmentId">Appointment ID:</label>
+                <input type="text" id="modalAppointmentId" required readonly>
+
+                <label for="modalPatientName">Patient Name:</label>
+                <input type="text" id="modalPatientName" required>
+
+                <label for="modalAppointmentDate">Date:</label>
+                <input type="date" id="modalAppointmentDate" required>
+
+                <label for="modalAppointmentTime">Time:</label>
+                <input type="time" id="modalAppointmentTime" required>
+
+                <label for="modalDoctor">Doctor:</label>
+                <input type="text" id="modalDoctor" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="table-section">
+        <h2>Scheduled Appointments</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Appointment ID</th>
+                    <th>Patient Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Doctor</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="appointment-list">
+                <!-- Data will be added dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="javascript/appointments.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* General body styling */
+body {
+    background: #8eb8b8; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('/pictures/bg.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+/* Main container */
+.login-container {
+    display: flex;
+    padding: 20px;
+    width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Left side - Login form */
+.login-form {
+    flex: 1; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Welcome text */
+.login-form h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #004d4d;
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.login-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input fields */
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Input focus effect */
+.login-form input:focus {
+    border-color: #008080;
+    box-shadow: 0 0 6px rgba(0, 128, 128, 0.3);
+}
+
+/* Login button */
+.login-form button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.login-form button:hover {
+    background-color: #006666;
+}
+
+.login-image {
+    flex: 0.9;
+    background: url('/pictures/login.jpg') no-repeat center center;
+    background-size: cover;
+    width: 280px;
+    height: auto;
+    min-height: 250px;
+}

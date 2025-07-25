@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Management</title>
+    <link rel="stylesheet" href="css/invoice.css">
+</head>
+<body>
+
+    <!-- Wrapper container to add box effect -->
+    <div class="container">
+        <section class="form-section">
+            <h2>Create New Invoice</h2>
+            <form id="invoice-form">
+                <label for="invoiceNo">Invoice No:</label>
+                <input type="text" id="invoiceNo" required>
+
+                <label for="invoicePatientId">Patient ID:</label>
+                <input type="text" id="invoicePatientId" required>
+
+                <label for="consultDate">Consult Date:</label>
+                <input type="date" id="consultDate" required>
+
+                <label for="billAmount">Bill Amount:</label>
+                <input type="number" id="billAmount" required>
+
+                <button type="submit">Add Invoice</button>
+            </form>
+        </section>
+
+    <!-- Modal for editing invoices -->
+    <div id="edit-invoice-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-invoice-modal">&times;</span>
+            <h2>Edit Invoice</h2>
+            <form id="edit-invoice-form">
+                <label for="edit-invoiceNo">Invoice No:</label>
+                <input type="text" id="edit-invoiceNo" readonly>
+
+                <label for="edit-invoicePatientId">Patient ID:</label>
+                <input type="text" id="edit-invoicePatientId" required>
+
+                <label for="edit-consultDate">Consult Date:</label>
+                <input type="date" id="edit-consultDate" required>
+
+                <label for="edit-billAmount">Bill Amount:</label>
+                <input type="number" id="edit-billAmount" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+        <section class="table-section">
+            <h2>Invoices</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice No</th>
+                        <th>Patient ID</th>
+                        <th>Consult Date</th>
+                        <th>Bill Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-list">
+                    <!-- Data will be added dynamically -->
+                </tbody>
+            </table>
+        </section>  
+    </div> <!-- Closing container div -->
+
+    <script src="javascript/invoice.js"></script>
+</body>
+</html>

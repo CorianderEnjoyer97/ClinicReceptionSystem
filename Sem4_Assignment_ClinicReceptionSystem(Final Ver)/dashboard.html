@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Reception System</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <div id="page-title" class="hero">
+        Welcome to the Clinic Reception System.
+    </div>
+
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile">
+                <img src="pictures/profile.jpg" alt="Profile Picture">
+                <h3>Welcome,<br>Sam Tao Kien.</h3>
+            </div>
+            <ul>
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="loadPage('register.html', 'Patient Registration')">Patient Registration</a></li>
+                <li><a href="#" onclick="loadPage('appointments.html', 'Appointment Management')">Appointment Management</a></li>
+                <li><a href="#" onclick="loadPage('invoice.html', 'Invoice Management')">Invoice Management</a></li>
+                <li><a href="#" onclick="loadPage('medicalrecord.html', 'Medical Record Management')">Medical Record Management</a></li>
+                <li><a href="#" onclick="loadPage('queue.html', 'Queue Management')">Queue Management</a></li>
+            </ul>
+            <button class="logout-btn" onclick="logout()">Log Out</button>
+        </nav>
+
+        <!-- Main Content Area Where Pages Load -->
+        <section class="main-content" id="content">
+            <div id="home-content">
+                <div class="month-nav">
+                    <button id="prevMonth"></button>
+                    <span id="monthDisplay">March 2025</span>
+                    <button id="nextMonth"></button>
+                </div>
+                <div class="calendar">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sun</th>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <th>Sat</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                            <!-- Calendar days will be generated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="javascript/dashboard.js"></script>
+</body>
+</html>

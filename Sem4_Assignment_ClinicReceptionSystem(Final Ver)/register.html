@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+    <!-- Wrapper container to add box effect -->
+    <div class="container">
+        <section class="form-section">
+            <h2>New Patient Form</h2>
+            <form id="register-form">
+                <label for="id">Patient ID:</label>
+                <input type="text" id="id" required>
+
+                <label for="ic">IC Number:</label>
+                <input type="text" id="ic" required>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <button type="submit">Register Patient</button>
+            </form>
+        </section>
+<!-- Modal for editing patient details -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <h2>Edit Patient Details</h2>
+            <form id="edit-form">
+                <label for="edit-ic">IC Number:</label>
+                <input type="text" id="edit-ic" required>
+
+                <label for="edit-name">Full Name:</label>
+                <input type="text" id="edit-name" required>
+
+                <label for="edit-dob">Date of Birth:</label>
+                <input type="date" id="edit-dob" required>
+
+                <label for="edit-phone">Phone Number:</label>
+                <input type="text" id="edit-phone" required>
+
+                <label for="edit-email">Email:</label>
+                <input type="email" id="edit-email" required>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+        <section class="table-section">
+            <h2>Patient List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>IC Number</th>
+                        <th>Full Name</th>
+                        <th>Date of Birth</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-list">
+                    <!-- Patient rows will be added here dynamically -->
+                </tbody>
+            </table>
+        </section>        
+    </div>
+
+    <script src="javascript/register.js"></script>
+</body>
+</html>

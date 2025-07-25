@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Record Management</title>
+    <link rel="stylesheet" href="css/medicalrecord.css">
+</head>
+<body>
+    <section class="form-section">
+        <h2>Add Medical Record</h2>
+        <form id="medicalrecord-form">
+            <label for="recordNo">Record No:</label>
+            <input type="text" id="recordNo" required>
+
+            <label for="medicalPatientId">Patient ID:</label>
+            <input type="text" id="medicalPatientId" required>
+
+            <label for="recordDate">Date:</label>
+            <input type="date" id="recordDate" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" required></textarea>
+
+            <button type="submit">Add Record</button>
+        </form>
+    </section>
+
+        <!-- Modal for editing medical records -->
+    <div id="edit-medicalrecord-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-medicalrecord-modal">&times;</span>
+            <h2>Edit Medical Record</h2>
+            <form id="edit-medicalrecord-form">
+                <label for="edit-recordNo">Record No:</label>
+                <input type="text" id="edit-recordNo" readonly>
+
+                <label for="edit-medicalPatientId">Patient ID:</label>
+                <input type="text" id="edit-medicalPatientId" required>
+
+                <label for="edit-recordDate">Date:</label>
+                <input type="date" id="edit-recordDate" required>
+
+                <label for="edit-description">Description:</label>
+                <textarea id="edit-description" required></textarea>
+
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="table-section">
+        <h2>Existing Medical Records</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Record No</th>
+                    <th>Patient ID</th>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="medical-record-list">
+                <!-- Data will be added dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="javascript/medicalrecord.js"></script>
+</body>
+</html>
