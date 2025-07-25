@@ -1,2 +1,2 @@
 # ClinicReceptionSystem
-A simple clinic reception system using MEAN stack
+A simple clinic reception system using JS, HTML and CSS
